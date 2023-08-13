@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Importing bootstrap and other requirements -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Title for sign in page -->
+    <title>Login</title>
+
+    <!-- Importing css for sign in page -->
+    <link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Using bootstrap container for grid system -->
+    <div class="container">
+
+        <!-- Using bootstrap row -->
+        <div class="row">
+
+            <br><br><br><br>
+
+        </div>
+
+        <!-- Using bootstrap row -->
+        <div class="row mt-3">
+
+            <!-- Using signup-form as a column -->
+            <div class="signup-form">
+
+                <!-- Creating a form -->
+                <form name="signin" id="signin" action="/" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                    <!-- Heading -->
+                    <div class="col-xs-8 col-xs-offset-4">
+                        <h2>Login</h2>
+                    </div>
+
+                    <!-- Login page logo -->
+                    <div class="form-group">
+                        <div class="col-xs-8 col-xs-offset-4 text-center">
+                            <img class="logo" src="public/images/logo.jpg" alt="Logo">
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-group">
+                        <div class="col-xs-8 col-xs-offset-4 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- Redirects to register page if user don't have an account -->
+                <div class="text-center mt-4">Don't have an account? <a href="/signup">Register here</a></div>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

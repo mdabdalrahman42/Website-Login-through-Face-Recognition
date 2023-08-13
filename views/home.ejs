@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Home</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- Importing Bootstrap and other requirements -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Linking to css file -->
+  <link rel="stylesheet" href="public/css/styles_home.css">
+
+</head>
+
+<body>
+
+  <form method="post" action="/home" enctype="multipart/form-data">
+
+    <!-- Home Section -->
+    <section class="colored-section" id="home">
+
+      <!-- Bootstrap container to implement bootstrap grid concept -->
+      <div class="container-fluid">
+
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+          <!-- Heading -->
+          <a class="navbar-brand" href="#">Face Recognition</a>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <!-- Options of Navbar -->
+            <ul class="navbar-nav ml-auto">
+
+              <!-- Opt 1 -->
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+
+              <!-- Opt 2 -->
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+
+              <!-- Opt 3 -->
+              <li class="nav-item">
+
+                <!-- Bootstrap Dropdown -->
+                <div class="dropdown">
+
+                  <a class="dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink"
+                    data-toggle="dropdown">
+                    Profile
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+
+                    <!-- Showing email address of user -->
+                    <a class="dropdown-item" href="#">
+                      Email: <%= message1 %>
+                    </a>
+
+                    <!-- Showing name of user -->
+                    <a class="dropdown-item" href="#">
+                      Name: <%= message2 %>
+                    </a>
+                    
+                    <!-- Logout -->
+                    <a class="dropdown-item" href="/">
+                      Logout
+                    </a>
+
+
+                  </div>
+
+                </div>
+
+              </li>
+
+            </ul>
+
+          </div>
+
+        </nav>
+
+
+        <!-- Title -->
+        <div class="row">
+
+          <div class="col-lg-6">
+            <h1 class="title">Login into Website through Face Recognition together with Email and Password.</h1>
+          </div>
+
+          <div class="col-lg-6">
+            <img class="title-image" src="public/images/home.jpg" alt="iphone-mockup">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="white-section" id="features">
+
+      <!-- Bootstrap container -->
+      <div class="container-fluid">
+
+        <!-- Bootstrap row -->
+        <div class="row">
+
+          <!-- First feature -->
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-check-circle fa-4x"></i> <!-- Importing icon required -->
+            <h3 class="feature-title">Easy to use.</h3> <!-- Feature title -->
+            <p>So easy to use, even a layman could do it.</p> <!-- Feature description -->
+          </div>
+
+          <!-- Second feature -->
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-bullseye fa-4x"></i>
+            <h3 class="feature-title">Increased Security.</h3>
+            <p>Security increases with reduced Cyber Crimes.</p>
+          </div>
+
+          <!-- Third feature -->
+          <div class="feature-box col-lg-4">
+            <i class="icon fas fa-heart fa-4x"></i>
+            <h3 class="feature-title">Guaranteed to work.</h3>
+            <p>Works with 99% Accuracy.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="colored-section" id="about">
+
+      <!-- Bootstrap carousel -->
+      <div id="about-carousel" class="carousel slide" data-ride="false">
+        <div class="carousel-inner">
+
+          <!-- First -->
+          <div class="carousel-item active container-fluid">
+
+            <!-- Heading -->
+            <h2 class="about-text">Vision</h2>
+
+            <!-- Description -->
+            <h5 class="mt-5 pl-5 text-light">All the websites existing today and will be made in the future should start
+              using this
+              login system.</h5>
+
+          </div>
+
+          <!-- Second -->
+          <div class="carousel-item container-fluid">
+
+            <!-- Heading -->
+            <h2 class="about-text">Mission</h2>
+
+            <!-- Description -->
+            <h5 class="mt-5 pl-4 text-light">Promoting the advantages of using this login system such as reduced cyber
+              crimes</h5>
+
+          </div>
+        </div>
+
+        <!-- Navigation button 1 -->
+        <a class="carousel-control-prev" href="#about-carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+
+        <!-- Navigation button 2 -->
+        <a class="carousel-control-next" href="#about-carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="white-section" id="contact">
+
+      <!-- Bootstrap container -->
+      <div class="container-fluid">
+
+        <!-- Icons with href -->
+        <a class="icon-size" href=""><i class="social-icon fab fa-facebook-f"></i></a>
+        <a class="icon-size" href=""><i class="social-icon fab fa-twitter"></i></a>
+        <a class="icon-size" href=""><i class="social-icon fab fa-instagram"></i></a>
+        <a class="icon-size" href=""><i class="social-icon fas fa-envelope"></i></a>
+
+        <p>© Copyright 2023 - Face Recognition</p>
+
+      </div>
+
+    </footer>
+
+  </form>
+
+  <!-- Script for alert message -->
+  <script>
+    let msg = '<%-message2%>'
+    swal({
+      title: "Good Job "+msg+"!",
+      text: "Login Successful",
+      icon: "success",
+      button: "Ok",
+    })
+  </script>
+
+</body>
+
+</html>

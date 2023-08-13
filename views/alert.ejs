@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Importing bootstrap and other requirements -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Title for sign in page -->
+    <title>Alert</title>
+
+    <!-- Importing css for sign in page -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Using bootstrap container for grid system -->
+    <div class="container">
+
+        <!-- Using bootstrap row -->
+        <div class="row">
+
+            <br><br><br><br><br><br>
+
+        </div>
+
+        <!-- Using bootstrap row -->
+        <div class="row mt-5">
+
+            <!-- Using signup-form as a column -->
+            <div class="signup-form site_construction">
+                <form name="email" id="email" action="/alert" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+                    <div class="col-xs-8 col-xs-offset-4 mt-4 text-center">
+
+                        <!-- Displaying the message sent by app.js -->
+                        <p><span class="text-danger"> <%= message %> </span>. To get Redirected to Login Page, <a href="/">Click here</a>.</p>
+                    
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Generating Alert message based on message sent by app.js -->
+    <script>
+
+        let msg = '<%-message%>'
+        if (msg == "!!! Registered Successfully") {
+            swal({
+                title: "Good Job!",
+                text: "Registered Successfully",
+                icon: "success",
+                button: "Ok",
+            })
+        }
+        else if (msg == "!!! User with entered Email Address already exists") {
+            swal({
+                title: "Sorry!",
+                text: "User with entered Email Address already exists",
+                icon: "error",
+                button: "Ok",
+            })
+        }
+        else if (msg == "!!! Face not Recognized") {
+            swal({
+                title: "Sorry!",
+                text: "Face is not Recognized",
+                icon: "error",
+                button: "Ok",
+            })
+        }
+        else if (msg == "!!! Incorrect Password") {
+            swal({
+                title: "Sorry!",
+                text: "Incorrect Password entered",
+                icon: "error",
+                button: "Ok",
+            })
+        }
+        else if (msg == "!!! Incorrect Email Address") {
+            swal({
+                title: "Sorry!",
+                text: "Incorrect Email Address Entered",
+                icon: "error",
+                button: "Ok",
+            })
+        }
+        else if(msg == "!!! Reset link sent to Entered Mail Address") {
+            swal({
+                title: "Good Job!",
+                text: "Reset link sent to Eetered Mail Address",
+                icon: "success",
+                button: "Ok",
+            })
+        }
+        else if(msg == "!!! Incorrect Security Question or Answer") {
+            swal({
+                title: "Sorry!",
+                text: "!!! Incorrect Security Question or Answer",
+                icon: "error",
+                button: "Ok",
+            })
+        }
+        else if (msg == "!!! Password changed Successfully") {
+            swal({
+                title: "Good Job!",
+                text: "Password changed Successfully",
+                icon: "success",
+                button: "Ok",
+            })
+        }
+    
+    </script>
+
+</body>
+
+</html>

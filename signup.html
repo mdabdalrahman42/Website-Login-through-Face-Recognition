@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Importing bootstrap and other requirements -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Title for sign up page -->
+    <title>Register</title>
+
+    <!-- Importing css for sign up page -->
+    <link rel="stylesheet" href="public/css/styles.css">
+
+</head>
+
+<body>
+
+    <!-- Using bootstrap container for grid system -->
+    <div class="container">
+
+        <!-- Using bootstrap row -->
+        <div class="row">
+
+            <!-- Using signup-form as a column -->
+            <div class="signup-form">
+
+                <!-- Creating a form -->
+                <form name="signup" id="signup" action="/signup" method="post" class="form-horizontal"
+                    enctype="multipart/form-data">
+
+                    <!-- Heading -->
+                    <div class="col-xs-8 col-xs-offset-4">
+                        <h2>Register</h2>
+                    </div>
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Name</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="name" id="name" required="required">
+                        </div>
+                    </div>
+
+                    <!-- Email Address -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Email Address</label>
+                        <div class="col-xs-8">
+                            <input type="email" class="form-control" name="email" id="email" required="required">
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Date of Birth</label>
+                        <div class="col-xs-8">
+                            <input type="date" class="form-control" name="dob" id="dob" required="required">
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="form-group">
+                        <label for="password" class="control-label col-xs-4">Password</label>
+                        <div class="col-xs-8">
+                            <input type="password" class="form-control" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number, one uppercase and lowercase letter, at least 8 or more characters" required="required">
+                        </div>
+                    </div>
+
+                    <!-- Security Questions -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Secutity Question</label>
+                        <div class="col-xs-8">
+                            <select class="form-control" name="security" required>
+                                <option disabled selected value> -- Select an Option -- </option>
+                                <option name="opt1" id="opt1" value="What is the name of your first School?">What is the
+                                    name of your first School?
+                                </option>
+                                <option name="opt2" id="opt2" value="Which was your first Pet?">Which was your first
+                                    Pet?</option>
+                                <option name="opt3" id="opt3" value="What is your Home Town?">What is your Home Town?
+                                </option>
+                                <option name="opt4" id="opt4" value="What is the name of your Favourite Game?">What is
+                                    the name of your Favourite Game?
+                                </option>
+                                <option name="opt5" id="opt5" value="What is the Company name of your Laptop?">What is
+                                    the Company name of your Laptop?
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Answer -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Answer</label>
+                        <div class="col-xs-8">
+                            <input type="password" class="form-control" name="answer" id="answer" required="required">
+                        </div>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="form-group">
+                        <label class="control-label col-xs-4">Upload Your Photo</label>
+                        <div class="col-xs-8">
+                            <input type="file" accept=".jpg,.jpeg,.png" class="form-control form-control-sm p-2" name="file" id="file"
+                                required="required">
+                        </div>
+                    </div>
+
+                    <!-- Agree -->
+                    <div class="form-group">
+                        <div class="col-xs-8 col-xs-offset-4 mt-4">
+
+                            <!-- Label for check box -->
+                            <p><label class="checkbox-inline"><input type="checkbox" name="checkbox" id="checkbox"
+                                        required="required" checked> I accept the
+                                    <a href="/site_construction">Terms of Use</a> & <a href="/site_construction">Privacy Policy</a>.</label></p>
+
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="form-group">
+                        <div class="col-xs-8 col-xs-offset-4 text-center">
+
+                            <!-- Submit button -->
+                            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- Redirects to login page if user already have an account -->
+                <div class="text-center mt-4">Already have an account? <a href="/">Login here</a></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

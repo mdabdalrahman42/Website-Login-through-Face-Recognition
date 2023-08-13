@@ -1,0 +1,132 @@
+/* Effects common for complete body */
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* Bootstrap Container */
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+.white-section {
+  background-color: #fff;
+}
+
+/* Home Section */
+#home {
+  background-color: #2d8377;
+  color: #fff;
+  text-align: left;
+}
+
+#home .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+/* Navigation Bar */
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family:'Times New Roman', Times, serif;
+  font-size: 1.7rem;
+  /* font-weight: bold; */
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Title */
+.title {
+  font-family: "Montserrat-Black";
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.title-image {
+  width: 70%;
+  height: 80%;
+  position: absolute;
+  margin-top: 25px;
+  right: 8%;
+  border-radius: 10%;
+}
+
+/* Features Section */
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #53afa3;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #2d8377;
+}
+
+/* About Section */
+#about {
+  background-color: #2d8377;
+}
+
+.about-text {
+  font-size: 3.5rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Footer Section */
+.social-icon {
+  color: #53afa3;
+  margin: 20px 10px;
+}
+
+.social-icon:hover {
+  color: #2d8377;
+  margin: 20px 10px;
+}
+
+.icon-size {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* Media Query for making Home Section more Responsive */
+@media (max-width: 1028px) {
+
+  #home {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
